@@ -5,9 +5,8 @@
 #define MAX 500
 
 int main()
-{   
-    int std_id, g1, g2, g3;
-    char name[50];
+{  
+    char name[MAX];
     int IDS[MAX];
     char Names[MAX][MAX];
     float Grades[MAX][MAX];
