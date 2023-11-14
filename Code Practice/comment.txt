@@ -1,6 +1,0 @@
-861022 Adam 65 72 56
-583923 Kim 38 49 34
-382034 keith 83 93 48
-392475 Sushi 90 93 39
-843984 Jake 39 23 34
-/* I want to delete this whole sentence in this file */
