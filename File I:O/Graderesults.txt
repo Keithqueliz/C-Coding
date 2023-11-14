@@ -1,0 +1,7 @@
+List of Students
+861022 Adam 64.33
+583923 Kim 40.33
+382034 keith 74.67
+392475 Sushi 74.00
+843984 Jake 32.00
+The max average is student keith with 74.67
