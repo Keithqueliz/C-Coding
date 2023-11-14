@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/keithqueliz/Desktop/C C++",
-      "program": "/Users/keithqueliz/Desktop/C C++/build/Debug/outDebug"
+      "cwd": ".",
+      "program": "build/Debug/outDebug"
     }
   ]
 }
