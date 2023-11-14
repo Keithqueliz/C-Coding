@@ -21,9 +21,9 @@ int main()
     // prints in the output file 
     fprintf(ofp, "List of Students\n");
 
-    // loop will save the ifp into arrays to be used later
-    for(int i = 0; i < name; i++)
-    {   
+        // loop will save the ifp into arrays to be used later
+        for(int i = 0; i < name; i++)
+        {   
         float avg = 0.0;
         fscanf(ifp, "%d%s", &ID[i], Names[i]);
 
@@ -36,7 +36,7 @@ int main()
         AverageGrades[i] = (avg / courses);
 
         fprintf(ofp, "%d %s %.2f\n", ID[i], Names[i], AverageGrades[i]);
-    }
+        }
 
     float maxAverage = AverageGrades[0];
     int maxID = 0;
