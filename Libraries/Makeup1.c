@@ -3,7 +3,7 @@
 float sumSeries(int x, int max);
 
 int main()
-{   
+{
     int x, max;
     float sum;
 
@@ -21,7 +21,7 @@ float sumSeries(int x, int max)
 {
     float sum = (x - 1.0) / x;
 
-    for(int i = 2; i <= max; i++)
+    for (int i = 2; i <= max; i++)
     {
         sum += .5 * (pow((x - 1.0) / x, i));
     }

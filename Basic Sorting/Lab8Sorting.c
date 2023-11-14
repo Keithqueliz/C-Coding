@@ -35,7 +35,7 @@ void arrayInput(int arr[MAX_SIZE], int size)
 {
     int num;
 
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         printf("Enter number %d: ", i + 1);
         scanf("%d", &num);
@@ -46,7 +46,7 @@ void arrayInput(int arr[MAX_SIZE], int size)
 void display_array(int arr[MAX_SIZE], int size)
 {
 
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
@@ -56,7 +56,7 @@ void display_array(int arr[MAX_SIZE], int size)
 
 void copy_array(int arr[MAX_SIZE], int arrCopy[MAX_SIZE], int size)
 {
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         arrCopy[i] = arr[i];
     }
@@ -73,14 +73,14 @@ void bubble_sort(int arr[MAX_SIZE], int size)
 {
     int count = 1;
 
-    for(int i = 0; i < size - 1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         printf("iteration# %d\n", count);
 
-        for(int j = 0; j < size - 1 - i; j++)
-        {   
+        for (int j = 0; j < size - 1 - i; j++)
+        {
 
-            if(arr[j] > arr[j + 1])
+            if (arr[j] > arr[j + 1])
             {
                 swap(&arr[j], &arr[j + 1]);
             }
@@ -88,9 +88,8 @@ void bubble_sort(int arr[MAX_SIZE], int size)
             display_array(arr, size);
         }
 
-        count++; 
+        count++;
     }
-
 
     printf("Sorted array using Bubble Sort:\n");
     display_array(arr, size);
@@ -98,16 +97,16 @@ void bubble_sort(int arr[MAX_SIZE], int size)
 }
 
 void selection_sort(int arr[MAX_SIZE], int size)
-{   
+{
     int count = 1;
 
-    for(int i = 0; i < size - 1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         int min = i;
 
-        for(int j = i + 1; j < size; j++)
+        for (int j = i + 1; j < size; j++)
         {
-            if(arr[j] < arr[min])
+            if (arr[j] < arr[min])
                 min = j;
         }
 
