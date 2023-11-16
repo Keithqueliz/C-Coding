@@ -64,7 +64,6 @@ int main()
    scanf("%s", key);
    int keyIndex = lookup(names, key, N);
 
-    // checks if -1 is returned 
    if(keyIndex == -1)
    {
         printf("%s not found in the list\n", key);    
@@ -74,7 +73,7 @@ int main()
     {
         printf("%s was found in the list. Here is the details:\n", key);
         printf("ID: %s Lname: %s Total: %.2f Grades:\n", ID[keyIndex], names[keyIndex], totals[keyIndex]);
-        printf("Midterm: %.2f, Final term: %.2f, quizzes:\n", grades[keyIndex][0], grades[keyIndex][1]);
+        printf("Midterm: %.2f, Final term: %.2f, quzies:\n", grades[keyIndex][0], grades[keyIndex][1]);
         for(int i = 2; i < G + 2; i++)
         {
             printf("%.2f ", grades[keyIndex][i]);
@@ -88,7 +87,6 @@ int main()
     return 0;
 }
 
-//This function takes the output file pointer, ids, names and totals of all the students and print the summary to the console and also t the output file.
 void writeData(FILE *foutput, char ID[][STLEN], char names[][STLEN],  float totals[MAXSTD], int N)
 {
     // Loop will use fscanf to save the ID and names in arrays and save into summary.txt
@@ -115,7 +113,6 @@ void writeData(FILE *foutput, char ID[][STLEN], char names[][STLEN],  float tota
 
 }
 
-// This function takes a float and returns the letter grade according to the following scale
 char getLetterGrade(float score)
 {   
     char finalGrade;
@@ -135,7 +132,6 @@ char getLetterGrade(float score)
     return finalGrade;
 }
 
-// This takes the total scores of all the students and then returns the index containing the highest total score.
 int getMaxTotalIdx(float totals[MAXSTD], int n)
 {
     int index;
@@ -153,18 +149,15 @@ int getMaxTotalIdx(float totals[MAXSTD], int n)
     return index;
 }
 
-//This function takes the names and a search key as a parameter and returns the index of the names array containing the name.
 int lookup(char names[][STLEN], char key[STLEN], int n)
 {   
     int found;
 
-    // converts key into lower case
     for(int j = 0; j < strlen(key); j++)
   {
         key[j] = tolower(key[j]);
   }
 
-    // tests if the key and name i is the same and then returns i
     for(int i = 0; i < n; i++)
     {   
         if(strcmp(names[i], key) == 0)
